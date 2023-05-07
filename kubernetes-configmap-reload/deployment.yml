@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: kubernetes-configmap-reload
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: demo-app
+      app: kubernetes-configmap-reload
   template:
     metadata:
       labels:
-        app: demo-app
+        app: kubernetes-configmap-reload
     spec:
       containers:
-        - name: demo-app
-          image: hussainsheriffj/demo-app:latest
+        - name: kubernetes-configmap-reload
+          image: praveensingam1994/kubernetes-configmap-reload:latest
